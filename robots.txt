@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://coltonjc0303-del.github.io/blue-lagoon-services/sitemap.xml
