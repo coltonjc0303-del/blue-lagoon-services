@@ -170,7 +170,9 @@ textarea {
   min-height: min(780px, calc(100svh - 110px));
   display: flex;
   align-items: center;
-  background: linear-gradient(112deg, rgba(255, 255, 255, 0.96) 0%, rgba(245, 251, 255, 0.94) 48%, rgba(212, 249, 247, 0.82) 100%);
+  background:
+    linear-gradient(112deg, rgba(255, 255, 255, 0.96) 0%, rgba(245, 251, 255, 0.94) 48%, rgba(212, 249, 247, 0.82) 100%),
+    url("assets/blue-lagoon-logo.png") right 6% center / min(44vw, 500px) auto no-repeat;
   isolation: isolate;
 }
 
@@ -211,66 +213,10 @@ textarea {
 }
 
 .hero-content {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.56fr);
-  gap: 46px;
-  align-items: center;
   padding: 78px 0 108px;
-}
-
-.hero-text {
   max-width: 760px;
-}
-
-.hero-proof {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.hero-photo-card {
-  position: relative;
-  width: min(100%, 390px);
-  padding: 10px;
-  border: 1px solid rgba(7, 94, 183, 0.13);
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.78);
-  box-shadow: var(--shadow);
-  transform: rotate(1.2deg);
-}
-
-.hero-photo-card img {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: 52% 55%;
-  border-radius: 6px;
-}
-
-.photo-badge {
-  position: absolute;
-  left: 24px;
-  right: 24px;
-  bottom: 24px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
-  min-height: 44px;
-  padding: 10px 14px;
-  color: var(--navy);
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(7, 94, 183, 0.14);
-  border-radius: 999px;
-  font-size: 0.92rem;
-  font-weight: 800;
-  box-shadow: var(--soft-shadow);
-  backdrop-filter: blur(10px);
-}
-
-.photo-badge svg {
-  width: 18px;
-  height: 18px;
-  color: var(--blue);
+  margin-left: max(calc((100vw - 1120px) / 2), 20px);
+  margin-right: auto;
 }
 
 .eyebrow,
@@ -600,72 +546,6 @@ h3 {
   width: 21px;
   height: 21px;
   flex: 0 0 auto;
-}
-
-.work-section {
-  background: linear-gradient(180deg, var(--white), var(--mist));
-}
-
-.work-gallery {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(240px, 0.9fr);
-  gap: 18px;
-}
-
-.work-card {
-  position: relative;
-  overflow: hidden;
-  min-height: 360px;
-  margin: 0;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--white);
-  box-shadow: var(--soft-shadow);
-}
-
-.work-card-feature {
-  grid-row: span 2;
-  min-height: 620px;
-}
-
-.work-card-wide {
-  min-height: 280px;
-}
-
-.work-card img {
-  width: 100%;
-  height: 100%;
-  min-height: inherit;
-  object-fit: cover;
-  object-position: center;
-}
-
-.work-card-feature img {
-  object-position: 55% 55%;
-}
-
-.work-card-wide img {
-  object-position: 34% 45%;
-}
-
-.work-card figcaption {
-  position: absolute;
-  left: 16px;
-  right: 16px;
-  bottom: 16px;
-  display: grid;
-  gap: 3px;
-  padding: 14px 16px;
-  color: var(--ink);
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(7, 94, 183, 0.14);
-  border-radius: var(--radius);
-  box-shadow: var(--soft-shadow);
-  backdrop-filter: blur(12px);
-}
-
-.work-card figcaption strong {
-  color: var(--navy);
 }
 
 .process-section {
@@ -1043,19 +923,8 @@ textarea:focus {
 
   .hero-content {
     width: min(100% - 40px, 760px);
-    grid-template-columns: 1fr;
     margin: 0 auto;
-    gap: 34px;
     padding: 58px 0 86px;
-  }
-
-  .hero-proof {
-    justify-content: flex-start;
-  }
-
-  .hero-photo-card {
-    width: min(100%, 420px);
-    transform: none;
   }
 
   h1 {
@@ -1076,19 +945,9 @@ textarea:focus {
   .choose-layout,
   .contact-layout,
   .pricing-layout,
-  .service-layout,
-  .work-gallery {
+  .service-layout {
     grid-template-columns: 1fr;
     gap: 30px;
-  }
-
-  .work-card-feature {
-    grid-row: auto;
-    min-height: 460px;
-  }
-
-  .work-card-wide {
-    min-height: 340px;
   }
 
   .contact-copy {
@@ -1168,10 +1027,6 @@ textarea:focus {
     padding: 38px 0 58px;
   }
 
-  .hero-proof {
-    display: none;
-  }
-
   h1 {
     font-size: 2.55rem;
     line-height: 1.03;
@@ -1223,41 +1078,10 @@ textarea:focus {
   .feature-panel,
   .coming-soon,
   .pricing-card,
-  .work-card,
-  .quote-form,
-  .area-panel {
-    border-radius: 8px;
-  }
-
-  .feature-panel,
-  .coming-soon,
-  .pricing-card,
   .quote-form,
   .area-panel {
     padding: 22px;
-  }
-
-  .work-card,
-  .work-card-feature,
-  .work-card-wide {
-    min-height: auto;
-  }
-
-  .work-card img {
-    height: 320px;
-    min-height: 0;
-  }
-
-  .work-card-feature img {
-    height: 420px;
-  }
-
-  .work-card figcaption {
-    position: static;
-    padding: 16px;
-    border-width: 1px 0 0;
-    border-radius: 0;
-    box-shadow: none;
+    border-radius: 8px;
   }
 
   .check-list,
@@ -1282,8 +1106,7 @@ textarea:focus {
   .steps,
   .soon-grid,
   .faq-list,
-  .reasons,
-  .work-gallery {
+  .reasons {
     gap: 12px;
   }
 
@@ -1356,18 +1179,9 @@ textarea:focus {
   .feature-panel,
   .coming-soon,
   .pricing-card,
-  .work-card figcaption,
   .quote-form,
   .area-panel,
   .step {
     padding: 18px;
-  }
-
-  .work-card img {
-    height: 280px;
-  }
-
-  .work-card-feature img {
-    height: 360px;
   }
 }
