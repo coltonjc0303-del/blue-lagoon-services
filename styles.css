@@ -608,14 +608,14 @@ h3 {
 
 .work-gallery {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(240px, 0.9fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
 }
 
 .work-card {
   position: relative;
   overflow: hidden;
-  min-height: 360px;
+  min-height: 620px;
   margin: 0;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -624,12 +624,7 @@ h3 {
 }
 
 .work-card-feature {
-  grid-row: span 2;
   min-height: 620px;
-}
-
-.work-card-wide {
-  min-height: 280px;
 }
 
 .work-card img {
@@ -642,10 +637,6 @@ h3 {
 
 .work-card-feature img {
   object-position: 55% 55%;
-}
-
-.work-card-wide img {
-  object-position: 34% 45%;
 }
 
 .work-card figcaption {
@@ -1087,10 +1078,6 @@ textarea:focus {
     min-height: 460px;
   }
 
-  .work-card-wide {
-    min-height: 340px;
-  }
-
   .contact-copy {
     position: static;
   }
@@ -1238,8 +1225,7 @@ textarea:focus {
   }
 
   .work-card,
-  .work-card-feature,
-  .work-card-wide {
+  .work-card-feature {
     min-height: auto;
   }
 
